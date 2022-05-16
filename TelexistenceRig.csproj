@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="FRRobot">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>5</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>6c779f21-4383-11d0-8901-0020af68f0a3</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Kinect.Sensor" Version="1.4.1" />
+    <PackageReference Include="Rti.ConnextDds" Version="6.1.0.3" />
+    <PackageReference Include="Rti.ConnextDds.Extra" Version="6.1.0.3" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\x64\Release\net6.0-windows\TelexistenceRig.xml" />
+  </ItemGroup>
+
+</Project>
