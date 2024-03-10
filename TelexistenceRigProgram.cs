@@ -9,8 +9,11 @@ using Rti.Types.Dynamic;
 
 namespace TelexistenceRig
 {
+    // Main program class
     public class TelexistenceRigProgram
     {
+        // Global variables for console state, robot, Kinects, threads, and user choices
+
         public static bool consoleOpen = true;
         public static DomainParticipant domainParticipant = null!;
         public static QosProvider provider = null!;
@@ -172,7 +175,7 @@ namespace TelexistenceRig
                 SUB_Path.Start();
             }
         }
-
+        // Gracefully shutdown the program, stopping threads and disconnecting devices
         private static void Shutdown()
         {
             Console.WriteLine("Clean exit in progress ...");
@@ -196,6 +199,7 @@ namespace TelexistenceRig
             Environment.Exit(0);
         }
 
+        // Helper method to set up a DataWriter for a given topic
         public static DataWriter<DynamicData> SetupDataWriter(string topicName, Publisher publisher, DynamicType dynamicData)
         {
             DataWriter<DynamicData> writer;
@@ -205,6 +209,7 @@ namespace TelexistenceRig
             return writer;
         }
 
+        // Helper method to set up a DataReader for a given topic
         public static DataReader<DynamicData> SetupDataReader(string topicName, Subscriber subscriber, DynamicType dynamicData)
         {
             DataReader<DynamicData> reader;
