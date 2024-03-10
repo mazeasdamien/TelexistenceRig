@@ -29,15 +29,6 @@ This repository contains a C# console application for controlling a Telexistence
 
 - The program catches the CTRL-C event to exit the console cleanly, stopping Kinects and interrupting threads before disposing of DDS resources and exiting.
 
-## Getting Started
-
-To run the Telexistence Rig Control System:
-
-1. Clone this repository: `git clone https://github.com/mazeasdamien/p2_fanuc_cranfield.git`
-2. Configure your preferences using the configuration menu.
-3. Initialize the Fanuc robot and start DDS communication.
-4. Interact with the Telexistence Rig using Unity for visualization.
-
 ## Dependencies
 
 - FRRobot library for Fanuc robotic system interaction.
